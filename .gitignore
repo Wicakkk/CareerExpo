@@ -1,0 +1,18 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore compiled files
+*.min.js
+*.min.css
+
+# Ignore log files and database files
+*.log
+*.sqlite
+
+# Ignore environment-specific files
+.env
+.env.local
+
+# Ignore dependency lock files
+package-lock.json
+yarn.lock

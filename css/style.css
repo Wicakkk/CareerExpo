@@ -400,6 +400,15 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 
 .read_bt a:hover{ color: #ffffff;}
 
+.apalah{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 800px;
+  gap: 10px;
+}
+
 .about_main{ 
 	width: 100%;
 	float: left;
@@ -1006,7 +1015,7 @@ h1, p { /* Transformasi awal ke posisi tengah */
 .carousel-control-prev, .carousel-control-next {
         width: 5%;
         color: #000000;
-        top: 150%;
+        top: 265%;
         transform: translateY(-50%);
     }
 

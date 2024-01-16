@@ -151,3 +151,48 @@ $(function () {
     $("#example").DataTable();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var webTextElement = document.querySelector(".web_text");
+  if (webTextElement) {
+    // Menggunakan setTimeout untuk memberikan jeda sebelum mengubah opacity
+    setTimeout(function () {
+      webTextElement.style.opacity = "1";
+    }, 1000); // Sesuaikan durasi penundaan jika perlu
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var webTextElement = document.querySelector(".donec_text");
+  if (webTextElement) {
+    // Menggunakan setTimeout untuk memberikan jeda sebelum mengubah opacity
+    setTimeout(function () {
+      webTextElement.style.opacity = "1";
+    }, 1000); // Sesuaikan durasi penundaan jika perlu
+  }
+}); 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var webTextElement = document.querySelector(".img-box");
+  if (webTextElement) {
+    // Menggunakan setTimeout untuk memberikan jeda sebelum mengubah opacity
+    setTimeout(function () {
+      webTextElement.style.opacity = "1";
+    }, 1000); // Sesuaikan durasi penundaan jika perlu
+  }
+}); 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var h2Element = document.querySelector("h2");
+  var pElement = document.querySelector("p");
+
+  // Menggunakan setTimeout untuk memberikan jeda sebelum mengubah opacity
+  setTimeout(function () {
+    if (h2Element) {
+      h2Element.style.opacity = "1";
+    }
+    if (pElement) {
+      pElement.style.opacity = "1";
+    }
+  }, 1000); // Sesuaikan durasi penundaan jika perlu
+});

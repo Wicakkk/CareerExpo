@@ -206,7 +206,7 @@ ul, li, ol {
 
 .logo{ width: 100%; float: left; }
 .logo-text {width: 100%; font-size: 25px; padding-top: 160px; color: #000000;}
-.web_text{ width: 100%; float: left; font-size: 40px; padding-top: 160px;}
+.web_text{ width: 100%; float: left; font-size: 40px; padding-top: 160px; opacity: 0; animation: slideInFromLeft 2s ease-in-out;}
 .margin-top-20{ margin-top: 20px; }
 
 .donec_text{
@@ -216,7 +216,20 @@ ul, li, ol {
     padding-bottom: 20px;
     z-index: 9;
     position: relative;
+    opacity: 0;
+    animation: slideInFromLeft 2s ease-in-out;
 }
+
+@keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 2;
+                transform: translateX(0);
+            }
+        }
 
 .bannen_inner{
 	width: 100%;
@@ -390,13 +403,13 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 .about_main{ 
 	width: 100%;
 	float: left;
-	background-color: #2ba879;
-    height: auto; 
+  height: auto; 
 	margin-top: 70px; 
 	margin-bottom: 20px;
 	position: relative;
  }
 
+ 
 .about_main:before {
     content: "";
     display: block;
@@ -730,13 +743,36 @@ button.main_bt a:hover {
     background-color: rgba(0, 123, 255, 0.8); /* Warna navbar ketika di-scroll (tambahkan warna dan transparansi sesuai keinginan Anda) */
 }
 
-h1, p, .img-box img {
-    transition: transform 0.5s ease; /* Transisi untuk efek transform (misalnya, perubahan skala) */
+h1, p { /* Transformasi awal ke posisi tengah */
+  animation: fadeInFromCenter 2s ease-in-out; /* Infinite untuk menjalankan animasi terus-menerus */
+}
+
+@keyframes fadeInFromCenter {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
   /* Hover efek untuk h1 */
+  .img-box {
+    opacity: 0; animation: slideInFromRight 2s ease-in-out;
+  }
 
-
+  @keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
   /* Hover efek untuk gambar */
   .img-box img:hover {
     transform: translateY(-10px); /* Pergeseran ke atas saat dihover */
@@ -1022,5 +1058,15 @@ h1, p, .img-box img {
   .simple-bar-chart > .item > .value { inset: auto 0 100% 0 }
   
 
-  
+  .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
 /* -- */

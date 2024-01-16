@@ -851,6 +851,7 @@ h1, p { /* Transformasi awal ke posisi tengah */
 
 
 /* start contact us */
+@media (min-width: 768px) {
 .container {
     width: 100%;
     max-width: 1200px;
@@ -931,12 +932,25 @@ h1, p { /* Transformasi awal ke posisi tengah */
     position: relative;
   margin-bottom: 50px;
 }
-.text {
+.text1 {
     text-align: left;
     position: absolute;
     left: 80px;
     font-family: 'Arial', sans-serif;
     color: #fff;
+}
+.text2 {
+  text-align: left;
+  position: absolute;
+  left: 80px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}.text3 {
+  text-align: left;
+  position: absolute;
+  left: 80px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 .mini_icon {
     list-style: none;
@@ -947,12 +961,16 @@ h1, p { /* Transformasi awal ke posisi tengah */
     position: relative;
     bottom: -35px;
     left: 293px;
+  }
 }
 @media (max-width: 767px) {
     .icon_main {
-      width: 100%;
+      width: 90%;
       float: left;
-      text-align: center;
+      text-align: left;
+    }
+    .useful_text {
+      margin-bottom: 30px;
     }
     
     .menu_text {
@@ -990,7 +1008,53 @@ h1, p { /* Transformasi awal ke posisi tengah */
       height: 100%;
       border: 0;
     }
+    .icon1 {
+      position: relative;
+      right: 100px;
+      margin-top: 7px;
+      margin-bottom: 15px;
+    }
+    .icon2 {
+      position: relative;
+      right: 13px;
+      margin-bottom: 15px;
+    }
+    .icon3 {
+      position: relative;
+      right: 49px;
+    }
+    .text1 {
+      text-align: left;
+      position: absolute;
+      margin-bottom: 0;
+      padding-left: 0;
+      left: 80px;
+      font-size: 13px;
+      font-family: 'Arial', sans-serif;
   }
+  .text2 {
+    position: relative;
+    bottom: 5px;
+    font-size: 13px;
+    font-family: 'Arial', sans-serif;
+
+}
+    .mini_text {
+      display: flex;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: left;
+      position: relative;
+      left: -8px;
+      font-family: 'Arial', sans-serif;
+    }
+    .mini_icon {
+      display: flex;
+      margin-left: 282px;
+      margin-bottom: -25px;
+      flex-direction: row;
+  }
+}
   /* end */
 
 .mini_icon{

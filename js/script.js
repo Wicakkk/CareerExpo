@@ -64,6 +64,20 @@ $(document).ready(function () {
 });
 
 function searchCompanies() {
+  var searchTerm = $("#companySearchInput").val().toLowerCase();
+
+  // Loop melalui setiap perusahaan
+  $(".about_inner").each(function () {
+    var companyText = $(this).text().toLowerCase();
+
+    // Periksa apakah perusahaan cocok dengan kriteria pencarian
+    if (companyText.includes(searchTerm)) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+
   var searchTerm = document
     .getElementById("companySearchInput")
     .value.toLowerCase();

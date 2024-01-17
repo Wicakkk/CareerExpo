@@ -1234,35 +1234,22 @@ p {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
 }
 
-#youtubeVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
+#myVideo {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-@media (max-width: 568px) {
-  #youtubeVideo {
+@media (min-width: 576px) {
+  #myVideo {
     height: 400px;
   }
 }
 
-@media (max-width: 576px) {
-  #youtubeVideo {
-    height: 150px;
-  }
-}
-
 @media (min-width: 769px) {
-  #youtubeVideo {
+  #myVideo {
     height: 450px;
-  }
-}
-
-@media (min-width: 769px) {
-  #youtubeVideo {
-    width: 700px;
+    width: auto;
+    max-width: 100%;
   }
 }
 
@@ -1287,10 +1274,10 @@ p {
 
   .apalah img,
   .apalah h2 {
-    width: 70px;
-    height: 80px;
+    width: 60px;
+    height: 75px;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 0; /* Hapus margin-right ketika di bawah 768px */
     margin-bottom: 10px;
  /* Tambahkan margin-bottom antara elemen di bawah 768px */

@@ -1028,7 +1028,7 @@ h1, p { /* Transformasi awal ke posisi tengah */
       position: absolute;
       margin-bottom: 0;
       padding-left: 0;
-      left: 80px;
+      left: 87px;
       font-size: 13px;
       font-family: 'Arial', sans-serif;
   }
@@ -1037,7 +1037,13 @@ h1, p { /* Transformasi awal ke posisi tengah */
     bottom: 5px;
     font-size: 13px;
     font-family: 'Arial', sans-serif;
-
+}
+.text3 {
+  position: relative;
+  bottom: 5px;
+  left: -35px;
+  font-size: 13px;
+  font-family: 'Arial', sans-serif;
 }
     .mini_text {
       display: flex;

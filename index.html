@@ -92,7 +92,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <video width="700" height="450" autoplay controls>
+                    <video id="myVideo" width="700" height="450" autoplay>
                         <source src="/careerexpo.mp4" type="video/mp4">
                         Maaf, browser Anda tidak mendukung tag video.
                     </video>
@@ -110,6 +110,7 @@
             </div>
         </div>
     </div>
+
     
     <div id="service" class="choose_section">
     	<div class="container">
@@ -315,6 +316,12 @@
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('myVideo');
+            video.play();
+        });
+    </script>
 
 </body>
 </html>

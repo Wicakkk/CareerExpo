@@ -198,18 +198,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-var video = document.getElementById("autoplayVideo");
-
-// Menambahkan event listener untuk mendeteksi selesai diputar
-video.addEventListener("ended", function () {
-  // Mengatur waktu video ke awal setelah selesai diputar
-  video.currentTime = 0;
-  // Memulai pemutaran video kembali
-  video.play();
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   var video = document.getElementById("myVideo");
+
+  // Menambahkan event listener untuk mendeteksi selesai diputar
+  video.addEventListener("ended", function () {
+    // Mengatur waktu video ke awal setelah selesai diputar
+    video.currentTime = 0;
+    // Memulai pemutaran video kembali
+    video.play();
+  });
+
+  // Menambahkan event listener untuk memulai video saat halaman di klik
   document.addEventListener("click", function () {
     video.play();
   });

@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
       webTextElement.style.opacity = "1";
     }, 1000); // Sesuaikan durasi penundaan jika perlu
   }
-}); 
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var webTextElement = document.querySelector(".img-box");
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       webTextElement.style.opacity = "1";
     }, 1000); // Sesuaikan durasi penundaan jika perlu
   }
-}); 
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var h2Element = document.querySelector("h2");
@@ -195,4 +195,21 @@ document.addEventListener("DOMContentLoaded", function () {
       pElement.style.opacity = "1";
     }
   }, 1000); // Sesuaikan durasi penundaan jika perlu
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var video = document.getElementById("youtubeVideo");
+
+  // Mengecek apakah video ada sebelum melakukan operasi
+  if (video) {
+    // Mengatur parameter untuk autoplay
+    var src = video.src;
+    video.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+
+    // Menangani responsivitas ketika ukuran layar berubah
+    window.addEventListener("resize", function () {
+      var containerWidth =
+        document.querySelector(".video-container").offsetWidth;
+    });
+  }
 });

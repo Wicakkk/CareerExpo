@@ -14,6 +14,27 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css?v=3.2.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/adminlte/plugins/chart.js/Chart.min.js"></script>
+
+    <script nonce="5989af46-2b09-4a77-8663-c56dd412451d">
+        try {
+        (function(w,d){
+            // ... (script Cloudflare Zaraz)
+        })(window,document);
+        } catch (err) {
+        console.error('Failed to run Cloudflare Zaraz: ', err)
+        fetch('/cdn-cgi/zaraz/t', {
+            credentials: 'include',
+            keepalive: true,
+            method: 'GET',
+        })
+        }
+    </script>
 
     <style>
         body {  
@@ -33,47 +54,18 @@
                 <img src="/images/logo yayasan wahana prestasi prima.png" alt="Yayasan Prestasi Prima Logo" class="small-logo">
                 <span class="logo-text" style="color: white;"><strong>Yayasan Prestasi Prima</strong></span>
             </a>
-            <h2 style="color: white;">Google Spreadsheet | Nama Perusahaan</h2>
+            <h2 style="color: white;">Rekapan Hasil Input</h2>
         </div>
     </nav>
 
     <div class="container">
-        <div class="row py-5">
-            <div class="col-lg-10 mx-auto">
-                <div class="card rounded shadow border-0">
-                    <div class="card-body p-5 bg-white rounded">
-                        <h2>Bar Chart Perusahaan</h2>
-                        <div class="simple-bar-chart">
-                            <div class="item" style="--clr: #5EB344; --val: 80">
-                                <div class="label">Label 1</div>
-                                <div class="value">80%</div>
-                            </div>
-                            <div class="item" style="--clr: #FCB72A; --val: 50">
-                                <div class="label">Label 2</div>
-                                <div class="value">50%</div>
-                            </div>
-                            <div class="item" style="--clr: #F8821A; --val: 100">
-                                <div class="label">Label 3</div>
-                                <div class="value">100%</div>
-                            </div>
-                            <div class="item" style="--clr: #E0393E; --val: 15">
-                                <div class="label">Label 4</div>
-                                <div class="value">15%</div>
-                            </div>
-                            <div class="item" style="--clr: #963D97; --val: 1">
-                                <div class="label">Label 5</div>
-                                <div class="value">1%</div>
-                            </div>
-                            <div class="item" style="--clr: #069CDB; --val: 90">
-                                <div class="label">Label 6</div>
-                                <div class="value">90%</div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="card card-danger">
+            </div>
+            <div class="card-body">
+                <canvas id="pieChart" style="min-height: 500px; height: 500px; max-height: 500px; max-width: 100%;"></canvas>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container">
@@ -256,7 +248,75 @@
         </div>
     </div>
 
+    <script>
+        $(function () {
+            // Get context with jQuery - using jQuery's .get() method.
+            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+            var pieData = {
+                labels: ['Chrome', 'IE', 'FireFox', 'Safari', 'Opera', 'Navigator'],
+                datasets: [{
+                    data: [500, 500, 400, 600, 300, 100],
+                    backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                }]
+            };
+            var pieOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    labels: {
+                        fontColor: 'white', // Mengatur warna teks legenda menjadi putih
+                        fontSize: 16,       // Mengatur ukuran font legenda
+                    }
+                }
+            };
 
+            // Create pie chart
+            new Chart(pieChartCanvas, {
+                type: 'pie',
+                data: pieData,
+                options: pieOptions
+            });
+        });
+    </script>
+
+    <style>
+        #pieChart {
+            max-height: 500px;
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #pieChart {
+                max-height: 200px;
+                font-size: small; /* Atur tinggi maksimum untuk layar berukuran sedang */
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            #pieChart {
+                max-height: 100px;
+                font-size: smaller; /* Atur tinggi maksimum untuk layar kecil */
+            }
+        }
+
+         #myNavbar h2 {
+            font-size: 1.7rem; /* Ukuran font default */
+        }
+
+        @media only screen and (max-width: 768px) {
+            #myNavbar h2 {
+                font-size: 1.5rem; /* Ukuran font untuk layar berukuran sedang */
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            #myNavbar h2 {
+                font-size: 1rem; /* Ukuran font untuk layar kecil */
+            }
+        }
+    </style>
 
 
 

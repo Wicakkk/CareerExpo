@@ -34,7 +34,18 @@
       h2 {
         font-size: 18px;
       }
-      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      .list-group-item {
+        animation: fadeIn 3s ease-in-out;
+      }
     </style>
   </head>
   <body>

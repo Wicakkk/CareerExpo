@@ -778,12 +778,7 @@ button.main_bt a:hover {
 }
 
 .navbar.scrolled {
-  background-color: rgba(
-    0,
-    123,
-    255,
-    0.8
-  ); /* Warna navbar ketika di-scroll (tambahkan warna dan transparansi sesuai keinginan Anda) */
+  background-color: rgba(0, 123, 255, 0.8); /* Warna navbar ketika di-scroll (tambahkan warna dan transparansi sesuai keinginan Anda) */
 }
 
 h1,
@@ -1089,7 +1084,7 @@ p {
     bottom: 5px;
     left: -35px;
     font-size: 13px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
   }
 
   .mini_text {
@@ -1123,7 +1118,7 @@ p {
 .copyright_main {
   width: 100%;
   float: left;
-  background-color: #da7d1e;
+  background-color: white;
   height: auto;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -1140,7 +1135,7 @@ p {
   color: #000;
 }
 .copy_text a {
-  color: rgb(255, 255, 255);
+  color: #ff871f;
 }
 .footer_menu {
   padding-right: 10px;
@@ -1186,11 +1181,7 @@ p {
   z-index: -1;
   --line-width: 1px;
   --line-spacing: calc(100% / var(--line-count));
-  background-image: repeating-linear-gradient(
-    to top,
-    transparent 0 calc(var(--line-spacing) - var(--line-width)),
-    var(--line-color) 0 var(--line-spacing)
-  );
+  background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
   box-shadow: 0 var(--line-width) 0 var(--line-color);
   opacity: var(--line-opacity);
 }
@@ -1280,7 +1271,7 @@ p {
     font-size: 15px;
     margin-right: 0; /* Hapus margin-right ketika di bawah 768px */
     margin-bottom: 10px;
- /* Tambahkan margin-bottom antara elemen di bawah 768px */
+    /* Tambahkan margin-bottom antara elemen di bawah 768px */
   }
 }
 /* -- */

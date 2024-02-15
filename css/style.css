@@ -1063,7 +1063,6 @@ p {
 
   .mini_text {
     display: flex;
-    margin-top: 60px;
     margin-bottom: 20px;
     text-align: left;
     position: relative;

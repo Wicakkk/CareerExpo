@@ -555,19 +555,6 @@ button.btn.btn-primary:focus {
   margin-top: 65px;
 }
 
-.contact_section_2 {
-  width: 100%;
-  float: left;
-  background-image: url(../images/contact-bg.png);
-  height: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-size: cover;
-  margin-top: 65px;
-  z-index: 5;
-  position: relative;
-}
-
 .section_right {
   width: 100%;
   float: left;
@@ -968,21 +955,18 @@ p {
     text-align: left;
     position: absolute;
     left: 80px;
-    font-family: "Arial", sans-serif;
     color: #fff;
   }
   .text2 {
     text-align: left;
     position: absolute;
     left: 80px;
-    font-family: "Arial", sans-serif;
     color: #fff;
   }
   .text3 {
     text-align: left;
     position: absolute;
     left: 80px;
-    font-family: "Arial", sans-serif;
     color: #fff;
   }
   .mini_icon {
@@ -1062,22 +1046,19 @@ p {
     margin-bottom: 0;
     padding-left: 0;
     left: 87px;
-    font-size: 13px;
-    font-family: "Arial", sans-serif;
+    font-size: 1px;
   }
   .text2 {
     position: relative;
     bottom: 5px;
-    font-size: 13px;
-    font-family: "Arial", sans-serif;
+    font-size: 15px;
   }
 
   .text3 {
     position: relative;
     bottom: 5px;
     left: -35px;
-    font-size: 13px;
-    font-family: "Arial", sans-serif;
+    font-size: 15px;
   }
 
   .mini_text {
@@ -1087,7 +1068,6 @@ p {
     text-align: left;
     position: relative;
     left: -8px;
-    font-family: "Arial", sans-serif;
   }
   .mini_icon {
     display: flex;
@@ -1132,18 +1112,6 @@ p {
 }
 .footer_menu {
   padding-right: 10px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-  color: #000000;
-  top: 246%;
-  transform: translateY(-50%);
-}
-
-.carousel-control-next {
-  right: 0%;
 }
 
 .simple-bar-chart {

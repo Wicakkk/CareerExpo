@@ -633,7 +633,6 @@ button.main_bt a:hover {
 .contact_section_3 {
   width: 100%;
   float: left;
-  background-color: #ebebeb;
   padding-bottom: 30px;
   padding-top: 30px;
   margin-top: -80px;
@@ -662,7 +661,7 @@ button.main_bt a:hover {
   width: 100%;
   float: left;
   font-size: 17px;
-  color: #afafaf;
+  /* color: #afafaf; */
   padding-left: 17px;
   text-align: center;
 }
@@ -684,12 +683,6 @@ button.main_bt a:hover {
   padding: 0px;
 }
 
-.menu ul li {
-  color: #fcfcfc;
-}
-.menu ul li a:hover {
-  color: #fcfcfc;
-}
 .useful_text {
   position: relative;
   top: -10%;

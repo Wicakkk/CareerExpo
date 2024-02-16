@@ -51,11 +51,37 @@
       .fotoheader {
         animation: fadeIn 3s ease-in-out;
       }
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 20%;
-        color: #000000;
-      }
+      /* Gaya untuk tombol prev dan next */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Gaya untuk ikon prev dan next */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Hapus ikon default */
+}
+
+.carousel-control-prev-icon::before {
+  content: '\2039'; /* Unicode untuk ikon panah kiri */
+  font-size: 2rem;
+}
+
+.carousel-control-next-icon::before {
+  content: '\203A'; /* Unicode untuk ikon panah kanan */
+  font-size: 2rem;
+}
+
       .kontak {
         color: #f79540;
         font-size: 60px;
@@ -398,13 +424,14 @@
         </div>
         <!-- Carousel Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="fas fa-arrow-left" aria-hidden="true"></span>
-          <span class="visually-hidden"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="fas fa-arrow-right" aria-hidden="true"></span>
-          <span class="visually-hidden"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
+      
       </div>
 
       <!-- contact -->

@@ -304,8 +304,6 @@ button.btn.btn-primary:focus {
 }
 
 .form-control:not(:last-child) {
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
   padding-left: 25px;
 }
 
@@ -758,7 +756,12 @@ button.main_bt a:hover {
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 123, 255, 0.8); /* Warna navbar ketika di-scroll (tambahkan warna dan transparansi sesuai keinginan Anda) */
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.8
+  ); /* Warna navbar ketika di-scroll (tambahkan warna dan transparansi sesuai keinginan Anda) */
 }
 
 h1,
@@ -1141,7 +1144,11 @@ p {
   z-index: -1;
   --line-width: 1px;
   --line-spacing: calc(100% / var(--line-count));
-  background-image: repeating-linear-gradient(to top, transparent 0 calc(var(--line-spacing) - var(--line-width)), var(--line-color) 0 var(--line-spacing));
+  background-image: repeating-linear-gradient(
+    to top,
+    transparent 0 calc(var(--line-spacing) - var(--line-width)),
+    var(--line-color) 0 var(--line-spacing)
+  );
   box-shadow: 0 var(--line-width) 0 var(--line-color);
   opacity: var(--line-opacity);
 }
